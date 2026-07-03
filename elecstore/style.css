@@ -238,6 +238,7 @@ a{
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     justify-items: center;
+    width: 100%;
 }
 
 .comments{
@@ -262,6 +263,7 @@ a{
 .footer{
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     gap: 200px;
     padding-top:20px
     
