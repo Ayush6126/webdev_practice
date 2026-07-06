@@ -69,6 +69,16 @@
     border-top-right-radius:40px ;
     
 }
+.heroimg button{
+    height:50px;
+    width: 120px;
+    transform: translateY(200px);
+    background-color: black;
+    border-style: none;
+    color: white;
+    padding: 5px;
+    border-radius: 120px;
+}
 .hero .h3{
     display: flex;
     flex-wrap: wrap;
