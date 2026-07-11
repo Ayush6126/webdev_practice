@@ -1,313 +1,112 @@
-*{
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
+.btn{
+  border: 1px solid gold;
+  border-radius: 4px;
+  color: goldenrod;
+  padding: 9px 15px;
+}
+.btn:hover{
+  border: 1px solid gold;
+  border-radius: 4px;
+  color: goldenrod;
+  background-color: rgba(255, 217, 0, 0.086);
+  transition: 1ms;
+}
+.navbar-brand{
+    font-size: 1.4rem;   
+    font-weight: bold; 
+    color: white;
+    font-family: cursive;
+}
+.navbar{
+  border-bottom: 1px solid grey;
 }
 
-
-.form button {
-  border: none;
-  background: none;
-  color: #8b8ba7;
+.custom-navbar{
+    background-color: #030307 !important;
 }
-.form {
-  --timing: 0.3s;
-  --width-of-input: 200px;
-  --height-of-input: 40px;
-  --border-height: 2px;
-  --input-bg: #fff;
-  --border-color: #2f2ee9;
-  --border-radius: 30px;
-  --after-border-radius: 1px;
-  position: relative;
-  width: var(--width-of-input);
-  height: var(--height-of-input);
-  display: flex;
-  align-items: center;
-  padding-inline: 0.8em;
-  border-radius: var(--border-radius);
-  transition: border-radius 0.5s ease;
-  background: var(--input-bg,#fff);
-}
-/* styling of Input */
-.input {
-  font-size: 0.9rem;
-  background-color: transparent;
-  width: 100%;
-  height: 100%;
-  padding-inline: 0.5em;
-  padding-block: 0.7em;
-  border: none;
-}
-/* styling of animated border */
-.form:before {
-  content: "";
-  position: absolute;
-  background: var(--border-color);
-  transform: scaleX(0);
-  transform-origin: center;
-  width: 100%;
-  height: var(--border-height);
-  left: 0;
-  bottom: 0;
-  border-radius: 1px;
-  transition: transform var(--timing) ease;
-}
-/* Hover on Input */
-.form:focus-within {
-  border-radius: var(--after-border-radius);
+.custom-navbar .navbar-brand,
+.custom-navbar .nav-link{
+    color: #8b8989;
 }
 
-input:focus {
-  outline: none;
-}
-/* here is code of animated border */
-.form:focus-within:before {
-  transform: scale(1);
-}
-/* styling of close button */
-/* == you can click the close button to remove text == */
-.reset {
-  border: none;
-  background: none;
-  opacity: 0;
-  visibility: hidden;
-}
-/* close button shown when typing */
-input:not(:placeholder-shown) ~ .reset {
-  opacity: 1;
-  visibility: visible;
-}
-/* sizing svg icons */
-.form svg {
-  width: 17px;
-  margin-top: 3px;
+.custom-navbar .nav-link:hover{
+    color: white;
 }
 .hero{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 60px;
-    background-image: url("https://images.pexels.com/photos/5052341/pexels-photo-5052341.jpeg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://images.pexels.com/photos/8387330/pexels-photo-8387330.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 650px;
+  gap: 30px;
+
 }
-.hero h1{
-    font-size: clamp(2.5rem, 8vw, 7rem);
-    letter-spacing: -1px;
-    line-height: 0.95;
-}
-.heroheading{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-}
-.heroheading p{
-    color: rgb(106, 105, 105);
-}
-.heroimg img{
+.hero img{
     width: 100%;
-    max-width: 600px;
-    height: auto;
-    display: block;
+    max-width: 500px;
+    height: 370px;
+    object-fit: contain;
+    background: #111318;
+    border-radius: 32px;
+    margin: 90px 30px 0px 0px;
+    border-radius: 90px;
+    box-shadow: 2px 2px 6px rgba(255, 217, 0, 0.667);
+
+
+    
 }
-.heroimg{
-    display: flex;
-    flex-wrap: wrap;
+.img button{
+  margin-top: 30px;
+  background-color: gold;
+  color: black;
+  transition: 10ms;
+}
+.img button:hover{
+  background-color: gold;
+  transform: scale(1.1);
+  color: black;
+  transition: 10ms;
+
+}
+.hero .img{
+  margin: 0px;
+  display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: start;
+    height: 100%;
 }
-#nav1{
-    border-bottom: 1px solid rgba(128, 128, 128, 0.722);
-   padding: 15px;
-   box-shadow: 0px 4px 8px grey;
-}
-/* From Uiverse.io by JaydipPrajapati1910 */ 
-.button {
-  --width: 100px;
-  --height: 35px;
-  --tooltip-height: 35px;
-  --tooltip-width: 90px;
-  --gap-between-tooltip-to-button: 18px;
-  --button-color: #222;
-  --tooltip-color: #fff;
-  width: var(--width);
-  height: var(--height);
-  background: var(--button-color);
-  position: relative;
-  text-align: center;
-  border-radius: 0.45em;
-  font-family: "Arial";
-  transition: background 0.3s;
+body{
+    font-family: "Space Grotesk", sans-serif;
 }
 
-.button::before {
-  position: absolute;
-  content: attr(data-tooltip);
-  width: var(--tooltip-width);
-  height: var(--tooltip-height);
-  background-color: #555;
-  font-size: 0.9rem;
-  color: #fff;
-  border-radius: .25em;
-  line-height: var(--tooltip-height);
-  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
-  left: calc(50% - var(--tooltip-width) / 2);
+.hero h2{
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -2px;
+    color: white;
 }
+.quote{
 
-.button::after {
-  position: absolute;
-  content: '';
-  width: 0;
-  height: 0;
-  border: 10px solid transparent;
-  border-top-color: #555;
-  left: calc(50% - 10px);
-  bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
-}
-
-.button::after,.button::before {
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.5s;
-}
-
-.text {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.button-wrapper,.text,.icon {
-  overflow: hidden;
-  position: absolute;
-  width: 100%;
   height: 100%;
-  left: 0;
-  color: #fff;
-}
-
-.text {
-  top: 0
-}
-
-.text,.icon {
-  transition: top 0.5s;
-}
-
-.icon {
-  color: #fff;
-  top: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 3px;
+  justify-content: start;
 }
+.quote p{
+  margin-top: 60px;
+  border: 1px solid goldenrod;
+  border-radius: 5px;
+  color: rgb(243, 176, 8);
+  padding: 8px;
+  width: fit-content;
+  background-color: rgba(228, 221, 178, 0.071);
 
-.icon svg {
-  width: 24px;
-  height: 24px;
 }
-
-.button:hover {
-  background: #222;
-}
-
-.button:hover .text {
-  top: -100%;
-}
-
-.button:hover .icon {
-  top: 0;
-}
-
-.button:hover:before,.button:hover:after {
-  opacity: 1;
-  visibility: visible;
-}
-
-.button:hover:after {
-  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
-}
-
-.button:hover:before {
-  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
-}
-
-/* From Uiverse.io by samuelfcosta18 */ 
-section.card {
-  position: relative;
-  width: 250px;
-  height: 250px;
-  background-color: #f2f2f2;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  perspective: 1000px;
-  transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-.card svg {
-  fill: #000;
-  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  border-radius: 3px;
-}
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px #000000;
-  background-color: #f2f2f2;
-  color: #ffffff;
-}
-
-.card__content {
-  color: #000000;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-  box-sizing: border-box;
-  background-color: #f2f2f2;
-  transform: rotateX(-90deg);
-  transform-origin: bottom;
-  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.card:hover .card__content {
-  transform: rotateX(0deg);
-}
-
-.card__title {
-  margin: 0;
-  padding-left: 5px;
-  font-size: 24px;
-  color: #000000;
-  font-weight: 700;
-}
-
-.card:hover svg {
-  scale: 0;
-}
-
-.card__description {
-  margin: 10px 0 0;
-  font-size: 14px;
-  color: #000000;
-  line-height: 1.4;
-}
-/* Commands to change the shadows in dark mode
-@media (prefers-color-scheme: dark) {
-  .card:hover {
-  box-shadow: 0 8px 16px #000000;
-  }
-}*/
-.cc{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
