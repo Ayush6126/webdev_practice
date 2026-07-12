@@ -1,3 +1,7 @@
+body{
+ background-color: #030307 !important;
+ color: white;
+}
 .btn{
   border: 1px solid gold;
   border-radius: 4px;
@@ -110,3 +114,64 @@ body{
   background-color: rgba(228, 221, 178, 0.071);
 
 }
+
+.f2{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(2,1fr);
+  gap: 0px;
+  background-color: aqua;
+  width: min-content;
+  margin: auto;
+  border: 1px solid rgb(218, 194, 134);
+  border-radius: 10px;
+}
+.f2 p{
+  color: grey;
+}
+.card{
+   background-color: #0a0a1a !important;
+   color: white;
+   border-radius: 0px;
+   border: 0.1px solid rgba(209, 196, 121, 0.485);
+  
+}
+
+
+#c1 ,#c1 img{
+  border-top-left-radius: 10px;
+}
+#c3{
+  border-top-right-radius: 10px;
+}
+#c4{
+  border-bottom-left-radius: 10px;
+}
+#c6{
+  border-bottom-right-radius: 10px;
+}
+.card img{
+  border-radius: 0px;
+}
+
+.headf{
+  margin: 70px;
+  margin-left: 150px;
+}
+
+.headf h2{
+  font-size: 70px;
+  color: goldenrod;
+}
+.headf p{
+  color: grey;
+}
+.card-body:hover{
+  background-color: rgba(128, 128, 128, 0.143);
+  transition: 50ms;
+  color: white;
+  
+}
+
+
+
